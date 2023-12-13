@@ -52,7 +52,7 @@ to quickly create a Cobra application.`,
 			case "hello":
 				err = m.Send(fmt.Sprintf("Hello I'm Kbot %s!", appVersion))
 			}
-			
+
 			return err
 		})
 
