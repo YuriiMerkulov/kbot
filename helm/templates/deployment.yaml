@@ -33,7 +33,8 @@ spec:
           type: ""
         name: dev-mem
       containers:
-        - name: {{ .Chart.Name }}
+        - name: {{ .Release.Name }}
+          image: "{{ .Values.image.repository }}/{{ .Chart.Name }}:{{ .Values.image.tag }}-{{ .Values.image.arch | default "amd64"}}"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           volumeMounts:
@@ -41,9 +42,9 @@ spec:
             name: dev-mem
           image: {{ .Values.image.repository }}/{{ .Chart.Name }}:{{ .Values.image.tag }}-{{ .Values.image.arch | default "arm64"}}
           env:
-          - name: {{ .Values.secret.tokenName }}
+          - name: {{ .Values.secret.env }}
             valueFrom:
               secretKeyRef:
-                key: {{ .Values.secret.tokenKey }}
+                key: {{ .Values.secret.key }}
                 name: {{ .Values.secret.name }}
                 
