@@ -5,11 +5,11 @@
 replicaCount: 1
 image:
   repository: "avengergold"
-  tag: "v1.0.7-217152b"
+  tag: "v1.0.8-490fac5"
   arch: amd64
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
-  key: "token"  
+  key: "token"
 securityContext:
   privileged: true
