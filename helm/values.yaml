@@ -4,12 +4,14 @@
 
 replicaCount: 1
 image:
-  repository: "avengergold"
+  registry: "ghcr.io"
+  repository: "avengergold/kbot"
   tag: "v1.0.7-217152b"
+  os: linux
   arch: amd64
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
-  key: "token"  
+  key: "token"
 securityContext:
   privileged: true
