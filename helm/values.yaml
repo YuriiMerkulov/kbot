@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "avengergold/kbot"
-  tag: "v1.0.7-217152b"
+  tag: "v1.0.8-490fac5"
   os: linux
   arch: amd64
 secret:
