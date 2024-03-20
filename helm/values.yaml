@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: "avengergold"
-  tag: "v1.0.7-490fac5"
+  tag: "v1.0.8-eb9ab47"
   arch: amd64
 secret:
   name: "kbot"
